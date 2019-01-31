@@ -1,0 +1,16 @@
+{
+    "name": "asus/obelisk-player",
+    "description": "Obelisk Player plugin",
+    "type": "wp-plugin",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Ilkin Ismailov",
+            "email": "inkas91@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"Includes\\": "./includes"}
+    }
+}

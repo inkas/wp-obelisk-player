@@ -1,0 +1,246 @@
+body.dragging, body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+.obelisk-wrapper {
+    border: 2px solid #c5dcef;
+    color: #fff;
+    border-radius: 3px;
+    box-sizing: content-box;
+    background: #258dc8;
+    background: -moz-linear-gradient(-45deg, #258dc8 0%, #182336 100%);
+    background: -webkit-linear-gradient(-45deg, #258dc8 0%,#182336 100%);
+    background: linear-gradient(135deg, #258dc8 0%,#182336 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#182336',GradientType=1 );}
+
+.obelisk-wrapper * {
+    -webkit-box-shadow: initial !important;
+    box-shadow: initial !important;
+}
+
+.obelisk-wrapper a:hover,
+.obelisk-wrapper a:focus {
+    outline: 0;
+}
+
+ol.obelisk-playlist li.placeholder {
+    position: relative;
+    /** More li styles **/
+}
+ol.obelisk-playlist li.placeholder:before {
+    position: absolute;
+    /** Define arrowhead **/
+}
+
+.obelisk-clearfix:before,
+.obelisk-clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.obelisk-left-col {
+    float: left;
+    width: 42%;
+    background: rgba(255, 255, 255, .13)
+}
+.obelisk-right-col {
+    overflow: hidden;
+}
+.obelisk-col-header {
+    padding: 15px;
+    background: rgba(255, 255, 255, .25);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.obelisk-main {
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+.obelisk-description {
+    height: 40px;
+    padding: 10px 15px;
+    overflow: auto;
+    background: rgba(255, 255, 255, .16);
+}
+ol.obelisk-playlist,
+ol.obelisk-playlist ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ol.obelisk-playlist {
+    height: 385px;
+    overflow: auto;
+}
+ol.obelisk-playlist .category-name,
+ol.obelisk-playlist .song-content {
+    word-wrap: break-word;
+    -webkit-box-shadow: inset 5px 0 0 0 rgba(255, 255, 255, .15) !important;
+    box-shadow: inset 5px 0 0 0 rgba(255, 255, 255, .15) !important;
+}
+ol.obelisk-playlist .category-name {
+    position: relative;
+}
+ol.obelisk-playlist .category-name,
+ol.obelisk-playlist .song-content
+{
+    padding: 10px 15px;
+}
+ol.obelisk-playlist .song-content {
+    position: relative;
+    padding-left: 25px;
+    background: rgba(255, 255, 255, .07);
+}
+.obelisk-right-col ol.obelisk-playlist .song-content {
+    background: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+ol.obelisk-playlist .song-content:after,
+ol.obelisk-playlist .category-name:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+ol.obelisk-playlist .song-title-wrapper {
+    padding-right: 20px;
+}
+ol.obelisk-playlist .btn-container > a {
+    float: left;
+    font-size: 0;
+}
+ol.obelisk-playlist .btn-container > a > img {
+    display: inline-block;
+    width: 16px;
+}
+ol.obelisk-playlist .toggle-btns .minus-circle,
+.obelisk-playlist.category-list .song-list{
+    display: none;
+}
+.obelisk-playlist.user-song-list .play-btn,
+.obelisk-playlist.user-song-list .pause-btn {
+    margin-right: 5px;
+}
+.obelisk-playlist .btn-container {
+    float: right;
+    margin-top: 2px;
+}
+.obelisk-playlist .song.playing .play-btn,
+.obelisk-playlist .song .pause-btn {
+    display: none;
+}
+.obelisk-playlist .song.playing .pause-btn {
+    display: block;
+}
+.obelisk-playlist.category-list .close-btn,
+.obelisk-container .song-hover-description {
+    display: none;
+}
+.obelisk-playlist .obelisk-progress-container {
+    height: 5px;
+    position: relative;
+    margin-bottom: 4px;
+    background: #3c3c3c;
+    border-radius: 25px;
+    padding: 3px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3) !important;
+    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3) !important;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3) !important;
+}
+.obelisk-playlist .obelisk-progress-container progress {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4) !important;
+    -moz-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4) !important;
+    box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4) !important;
+}
+.obelisk-playlist .obelisk-progress-container progress::-moz-progress-bar {
+    background-color: rgb(43,194,83) !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(43,194,83)), color-stop(1, rgb(84,240,84)) );
+    background-image: -moz-linear-gradient( center bottom, rgb(43,194,83) 37%, rgb(84,240,84) 69% );
+}
+.obelisk-playlist .obelisk-progress-container progress::-webkit-progress-value {
+    background-color: rgb(43,194,83) !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(43,194,83)), color-stop(1, rgb(84,240,84)) );
+    background-image: -moz-linear-gradient( center bottom, rgb(43,194,83) 37%, rgb(84,240,84) 69% );
+}
+.obelisk-playlist .obelisk-progress-container progress {
+    color: rgb(43,194,83) !important;
+}
+.obelisk-playlist .obelisk-progress-container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .07)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .07)), color-stop(.75, rgba(255, 255, 255, .07)), color-stop(.75, transparent), to(transparent) );
+    background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent );
+    z-index: 1;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px;
+    -webkit-animation: move 2s linear infinite;
+    -moz-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+.obelisk-playlist .obelisk-progress-container:hover {
+    cursor: pointer;
+}
+.obelisk-progress-wrapper .current-time,
+.obelisk-progress-wrapper .total-time {
+    font-size: 10px;
+}
+.obelisk-progress-wrapper .current-time {
+    float: left;
+}
+.obelisk-progress-wrapper .total-time {
+    float: right;
+}
+.obelisk-description a {
+    color: #72a1a9;
+}
+.obelisk-container progress::-webkit-progress-value {
+    background: #e1a300;
+}
+.obelisk-container progress::-moz-progress-bar {
+    background: #808080;
+}
+.obelisk-container progress::-webkit-progress-bar {
+    background: #808080;
+}
+.info-btn {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url('../img/info.png') no-repeat 0 0;
+    background-size: cover;
+}
+.info-btn:hover {
+    background-image: url('../img/info-hover.png');
+}
