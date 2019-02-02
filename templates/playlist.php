@@ -10,7 +10,7 @@
                 <div class="obelisk-col-header">
                     Obelisk Player
                 </div>
-                <ol class='obelisk-playlist category-list'>
+                <ol class="obelisk-playlist category-list scrollbar-macosx">
                     <?php
                     $categoriesWithSongs = \Includes\Models\Playlist::getCategoriesWithSongs();
 
@@ -75,7 +75,7 @@
                 <div class="obelisk-col-header">
                     My Playlist
                 </div>
-                <ol class='obelisk-playlist user-song-list'>
+                <ol class="obelisk-playlist user-song-list scrollbar-macosx">
                     <?php
                     $userId = get_current_user_id();
                     $playlist = \Includes\Models\Playlist::getUserPlaylist($userId);

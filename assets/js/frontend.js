@@ -29,12 +29,15 @@ jQuery(document).ready(function($) {
         $obeliskPlayerData = $('#obelisk-player-data'),
         $allPlaylists = $('.obelisk-playlist, .obelisk-playlist ol'),
         $userSongList = $('.obelisk-playlist.user-song-list'),
-        $playerSongList = $(".obelisk-left-col .song-list"),
+        $playerSongList = $('.obelisk-left-col .song-list'),
+        $scrollbar = $('.scrollbar-macosx'),
         helper = new Helper(),
         adjustment;
 
     ajax_object.ajax_url = $obeliskPlayerData.data('url');
     ajax_object.nonce = $obeliskPlayerData.data('nonce');
+
+    $scrollbar.scrollbar();
 
     $playerSongList.sortable({
         group: 'categories',
@@ -116,7 +119,6 @@ jQuery(document).ready(function($) {
     var $groupUserList = $userSongList.sortable({
         group: 'categories'
     });
-
 
     $allPlaylists.on('mousedown touchstart click', '.play-btn, .pause-btn, .close-btn, .obelisk-progress-container', function(e) {
         e.preventDefault();

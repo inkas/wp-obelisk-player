@@ -32,8 +32,10 @@ class EnqueueAssets implements API
 
     public function enqueueFrontEnd()
     {
+        wp_register_style('jQueryScrollbarStyle', Config::assets() . '/css/jquery.scrollbar.css');
         wp_register_style('pluginFrontEndStyle', Config::assets() . '/css/frontend.css');
-        wp_register_script('pluginFrontEndScript', Config::assets() . '/js/frontend.js');
+        wp_register_script('jQueryScrollbarScript', Config::assets() . '/js/jquery.scrollbar.min.js');
         wp_register_script('jQuerySortablePlugin', Config::assets() . '/js/jquery-sortable.js');
+        wp_register_script('pluginFrontEndScript', Config::assets() . '/js/frontend.js');
     }
 }

@@ -17,7 +17,9 @@ class Shortcode implements API
 
     public function playlistShortcode($atts, $content = null)
     {
+        wp_enqueue_style('jQueryScrollbarStyle');
         wp_enqueue_style('pluginFrontEndStyle');
+        wp_enqueue_script('jQueryScrollbarScript');
         wp_enqueue_script('jQuerySortablePlugin');
         wp_enqueue_script('pluginFrontEndScript');
 
